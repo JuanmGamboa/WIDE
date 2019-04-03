@@ -6,4 +6,6 @@ public class Main {
 
     int cosa= 2 ;
     // estoy bien buenote
+
+    int sasas= 3;
 }
