@@ -8,4 +8,5 @@ public class Main {
     // estoy bien buenote
 
     int sasas= 3;
+    int man=4;
 }
