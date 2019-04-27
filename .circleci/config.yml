@@ -30,6 +30,13 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
 
+    - run: mvn dependency:go-offline
+
+    - save_cache:
+        paths:
+        - ~/.m2
+        key: v1-dependencies-{{ checksum "pom.xml" }}
+
         # save test results
         # From:
         #circleci.com/docs/2.0/collect-test-data/#maven-surefire-plugin-for-java-junit-results
@@ -43,5 +50,8 @@ jobs:
             path: ~/junit
         - store_artifacts:
             path: ~/junit
+
+    # run tests!
+    - run: mvn integration-test
 
 
