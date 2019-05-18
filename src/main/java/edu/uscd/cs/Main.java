@@ -2,10 +2,8 @@ package edu.uscd.cs;
 
 public class Main {
 
-    public static void main(String[] args){}
+    public static void main(String[] args){
+        System.out.println(args[0]);
+    }
 
-    int cosa= 2 ;
-    // estoy bien buenote
-
-    int sasas= 3;
 }
